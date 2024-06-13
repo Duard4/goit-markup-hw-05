@@ -1,4 +1,3 @@
-
 body {
     font-family: "Roboto", sans-serif;
     color: #434455;
@@ -8,11 +7,7 @@ body {
     background-color: #FFFFFF;
 }
 
-section {
-    padding: 120px 156px;
-}
-
-/* RESET STYLES */
+/* GLOBAL TAGS CONFIGURE */
 * {
     padding: 0;
     margin: 0;
@@ -20,15 +15,25 @@ section {
 a {
     text-decoration: none;
 }
+ul {
+    list-style-type: none;    
+}
+img {
+    display: block
+}
+a, a:active {
+    color: #4D5AE5;
+    align-content: center;
+    font-style: normal;
+}
 
-/* GLOBAL TEXT CONFIGURE */
-h1 {
+/* TEXT CONFIGURE */
+.main-title {
     font-size: 56px;
     line-height: 1.07;
-    max-width: 496PX;
     letter-spacing: 0.02em;
 }
-h2 {
+.section-title {
     font-size: 36px;
     margin-bottom: 72px;
     line-height: 1.11; 
@@ -36,33 +41,22 @@ h2 {
     text-transform: capitalize;
     color: #2e2f42 ;
 }
-h3 {
+.element-title {
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
     color: #2e2f42 ;
+    letter-spacing: 0.02em;
 }
-p {
+.text {
     margin-top: 8px;
+    font-size: 16px;
 }
-
-/* GLOBAL LIST CONFIGURE */
-ul {
-    list-style-type: none;    
-    display: inline-flex;
-    padding: 0;
-    gap: 24px;
-}
-
-/* GLOBAL LINK & SPAN CONFIGURE */
-a, a:active {
-    color: #4D5AE5;
-    align-content: center;
-    font-style: normal;
-}
-
 
 /* ELEMENTS CONFIGURE */
+.section {
+    padding: 120px 156px;
+}
 .logo {
     font-family: "Raleway", sans-serif;
     font-size: 18px;
@@ -71,15 +65,31 @@ a, a:active {
     line-height: 1.17;
     text-transform: uppercase;
 }
-button {
+.order-btn {
     background-color: #4D5AE5;
     font-weight: 500;
-    color: #FFFFFF;
     padding: 16px 32px;    
     border: none;
     letter-spacing: 0.04em;
     border-radius: 5px;
     cursor: pointer;
+    line-height: 1.5;
+}
+.order-btn:hover, .order-btn:focus {
+    background-color: #404BBF;
+}
+
+/* LIST CONFIGURE */
+.list {
+    list-style-type: none;    
+    display: inline-flex;
+    padding: 0;
+}
+.card-list {
+    gap: 24px;
+}
+.header-list {
+    gap: 40px;
 }
 
 /* CARDS CONFIGURE */
@@ -95,39 +105,45 @@ button {
 
 /* SECTIONS CONFIGURE */
 .header {
-    width: 100%;
-    display: inline-flex;
     background-color: #FFFFFF;
-    align-items: center;
     padding: 24px 156px;
-    
-    ul a, span {
-        color: #2E2F42;
-    }
-    nav, address {
-        display: inherit;
-        
-    }
-    nav {
-        font-weight: 500;
-    }
-    ul {
-        gap: 40px;
-    }
-    address {
+
+    .address {
         margin-left: 332px;
+        font-style: normal;
     }
     .logo {
         margin-right:76px;
     }
-    
+}
+
+.header-logo-span {
+    color: #2e2f42;
+}
+.footer-logo-span {
+    color: #f4f4fd ;
+} 
+.nav-link {
+    color: #2e2f42;
+    font-weight: 500 ;
+
+}
+
+address {
+    font-style: normal;
+}
+address .address-link {
+    color: #434455;
+}
+
+.nav-link:hover, .nav-link:focus, .address-link:hover, .address-link:focus {
+    color: #404bbf ;
 }
 
 .hero {
     background-color: #2E2F42;
     color: #FFFFFF;
     text-align: center;
-    height: 672px;
     h1 {
         margin: 188px auto 48px;
     }
@@ -149,17 +165,12 @@ button {
 }
 
 .footer {
-    padding: 100px 156px;
     background-color: #2E2F42;
     color: #F4F4FD;
     
-    p {
-        max-width: 264px;
+    .text {
         margin-top: 16px;
     }
-    span {
-        color: #f4f4fd ;
-    } 
 }
 
 
