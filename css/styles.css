@@ -187,6 +187,7 @@ a, a:active {
 .portfolio .card-content {
     border: 1px solid #E7E9FC;
     text-align: left;
+    border-top: none; 
     padding: 32px 16px;
 }
 .multi-row {
