@@ -77,6 +77,7 @@ a, a:active {
 .logo {
     font-family: "Raleway", sans-serif;
     font-size: 18px;
+    display: inline-block;
     margin-right: 76px;
     font-weight: bold;
     letter-spacing: 0.03em;
@@ -209,6 +210,5 @@ a, a:active {
     }
 }
 .footer .logo {
-    display: inline-block;
     margin-bottom: 16px; 
 }
