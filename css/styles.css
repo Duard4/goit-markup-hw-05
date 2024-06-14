@@ -47,11 +47,11 @@ a, a:active {
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
+    margin-bottom: 8px;
     color: #2e2f42 ;
     letter-spacing: 0.02em;
 }
 .text {
-    margin-top: 8px;
     font-size: 16px;
 }
 
@@ -153,32 +153,32 @@ a, a:active {
 .card-list {
     gap: 24px;
 }
-.element-title {
-    margin-bottom: 8px;
-}
 .c-width {
     width: calc((100% - 72px) / 4);
 }
 .card {
     border-radius: 0px 0px 4px 4px;
     background-color: #FFFFFF;
-    .element-title {
-        margin: 32px 16px 0;
-    }
-    .text {
-        margin: 0 16px 32px;
-    }
 }
 .header-list {
     gap: 40px;
 }
+
+
 .card-content {
-    border: 1px solid #E7E9FC;
-    text-align: left;
+    padding: 32px 0 ;
+    text-align: center;
 }
 .portfolio {
     .c-width {
         width: calc((100% - 48px) / 3); 
+    }
+    .card {
+        border: 1px solid #E7E9FC;
+    }
+    .card-content {
+        text-align: left;
+        padding: 32px 16px;
     }
 }
 .multi-row {
