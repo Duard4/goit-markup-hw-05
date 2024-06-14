@@ -77,7 +77,6 @@ a, a:active {
 .logo {
     font-family: "Raleway", sans-serif;
     font-size: 18px;
-    margin-right: 76px;
     font-weight: bold;
     letter-spacing: 0.03em;
     line-height: 1.17;
@@ -91,9 +90,15 @@ a, a:active {
         margin-left: 332px;
         font-style: normal;
     }
+    .logo {
+        margin-right: 76px;
+    }
     .logo-span {
         color: #2e2f42;
     }
+}
+.header-list {
+    gap: 40px;
 }
 .nav-link {
     color: #2e2f42;
@@ -136,7 +141,7 @@ a, a:active {
     background-color: #404BBF;
 }
 
-/*  */
+/* FEATURES STYLES */
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -149,9 +154,6 @@ a, a:active {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-}
-.team {
-    background-color: #F4F4FD;
 }
 
 /* LIST CONFIGURE */
@@ -170,14 +172,14 @@ a, a:active {
     border-radius: 0px 0px 4px 4px;
     background-color: #FFFFFF;
 }
-.header-list {
-    gap: 40px;
-}
-
-
-.card-content {
+.team .card-content {
     padding: 32px 0 ;
     text-align: center;
+}
+
+/* TEAM & PORTFOLIO STYLES */
+.team {
+    background-color: #F4F4FD;
 }
 .portfolio {
     .c-width {
@@ -194,6 +196,7 @@ a, a:active {
     row-gap: 48px; 
 }
 
+/* FOOTER STYLES */
 .footer {
     padding: 100px 0;
     background-color: #2E2F42;
