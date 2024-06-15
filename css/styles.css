@@ -63,10 +63,12 @@ a, a:active {
     width: 1158px;
     margin: 0 auto;
     padding: 0 15px;
-    display: flex; 
 }
 .column {
     flex-direction: column;
+}
+.flex {
+    display: flex;
 }
 
 /* HEADER STYLES */
@@ -87,6 +89,7 @@ a, a:active {
     background-color: #FFFFFF;
     padding: 24px 156px;
     border-bottom: 1px solid #e7e9fc;
+
     .address {
         margin-left: 332px;
         font-style: normal;
@@ -210,7 +213,5 @@ a, a:active {
 }
 .footer .logo {
     margin-bottom: 16px; 
-}
-.f-logo {
     display: inline-block;
 }
