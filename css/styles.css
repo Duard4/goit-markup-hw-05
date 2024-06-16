@@ -132,6 +132,7 @@ a, a:active {
     bottom: -1px;
     left: 0;
     background-color: #404BBF;
+    border-radius: 2px;
 }
 
 /* HERO STYLES */
@@ -310,6 +311,7 @@ a, a:active {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #FFFFFF;
+    margin-bottom: 16px; 
 }
 .footer .social-icons-list {
     gap: 16px;
