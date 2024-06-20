@@ -380,7 +380,7 @@
         </div>
     </footer>
     <div class="modal-overlay is-open">
-        <form class="modal" action="">
+        <form class="modal" action="submit">
             <svg class="icon close" width="8" height="8">
                 <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
             </svg>
@@ -390,29 +390,27 @@
                 <svg class="icon inp" width="24" height="24">
                     <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
                 </svg>
-                <input class="input" type="text" name="name">
-            </label>
-            <label class="label" for="phone">Phone
-                <svg class="icon inp" width="24" height="24">
-                    <use href="./images/icons.svg#icon-phone-black-18dp-1"></use>
-                </svg>
-                <input class="input" type="text" name="phone">
-            </label>
-            <label class="label" for="email">Email
-                <svg class="icon inp" width="24" height="24">
-                    <use href="./images/icons.svg#icon-email-black-18dp-1"></use>
-                </svg>
-                <input class="input" type="email" name="email">
-            </label>
-            <label class="label" for="comment">Comment
-                <textarea class="textarea" name="comment" id="form-comment" rows="5"
-                    placeholder="Text input"></textarea>
-            </label>
-            <label class="label accept-text flex" for="policy">
-                <input type="checkbox" name="policy" value="accept" required />
-                I accept the terms and conditions of the <a href="" class="modal-link">Privacy Policy</a>
-            </label>
-            <button class="submit-button" type="submit">Send</button>
+                <input class="input" id="name" type="text"></label>
+                <label class="label" for="phone">Phone
+                    <svg class="icon inp" width="24" height="24">
+                        <use href="./images/icons.svg#icon-phone-black-18dp-1"></use>
+                    </svg>
+                    <input class="input" id="phone" type="text">
+                </label>
+                <label class="label" for="email">Email
+                    <svg class="icon inp" width="24" height="24">
+                        <use href="./images/icons.svg#icon-email-black-18dp-1"></use>
+                    </svg>
+                    <input class="input" id="email" type="email">
+                </label>
+                <label class="label" for="comment">Comment
+                    <textarea class="textarea" id="comment" rows="5" placeholder="Text input"></textarea>
+                </label>
+                <label class="label accept-text flex" for="policy">
+                    <input type="checkbox" id="policy" value="accept" required>
+                    I accept the terms and conditions of the <a href="" class="modal-link">Privacy Policy</a>
+                </label>
+                <button class="submit-button" type="submit">Send</button>
         </form>
     </div>
 </body>
