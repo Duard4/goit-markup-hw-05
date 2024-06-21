@@ -142,7 +142,6 @@ a:active {
 }
 
 .btn {
-    display: block;
     margin: 0 auto;
     background-color: var(--iris);
     color: var(--white);
@@ -154,12 +153,13 @@ a:active {
     transition: background-color var(--animation);
 }
 .order-btn {
+    display: block;
     font-weight: 500;
     height: 56px;
     min-width: 169px;
     margin-top: 48px;
 }
-.submit-btn {
+.modal-form .submit-btn {
     display: block;
     padding: 16px 32px;
     justify-content: center;
@@ -342,7 +342,37 @@ a:active {
     transform: translateY(0);
 }
 
+.subscribe {
+    margin-left: 80px;
+}
+
+.subscribe-form {
+    gap: 24px;
+}
+.subscribe-form .input {
+    border: 1px solid #fff;
+    border-radius: 4px;
+    min-width: 264px;
+    height: 40px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    background: transparent;
+    padding: 8px 16px;
+    line-height: 2;
+}
+.subscribe-form .input::placeholder {
+    color: var(--white);
+}
+.subscribe-form .submit-btn {
+    min-width: 165px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.subscribe-form .icon {
+    margin-left: 16px;
+}
 /* FORM */
+
 .modal-overlay {
     position: fixed;
     z-index: 999;
@@ -359,111 +389,152 @@ a:active {
     transition: opacity var(--animation);
 }
 .modal {
-    padding: 24px;
-    max-width: 408px;
-    background-color: var(--cloud);
-    max-height: 80%;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 408px;
+    min-height: 584px;
+    padding: 72px 24px 24px 24px;
+    background: var(--dairy);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: transform var(--animation);
     overflow-y: auto;
-}
-.modal .title {
-    font-size: 16px;
-    text-align: center;
-    font-weight: 500;
-    margin: 48px 0 16px;
-    color: var(--navy-blue);
 }
 .modal-overlay.is-open {
     opacity: 1;
     pointer-events: auto;
 }
-.modal .label {
-    position: relative;
-    color: var(--light-slate);
+.close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cornflower);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+    cursor: pointer;
+    transition: background-color var(--animation);
+    transition: border var(--animation);
 }
-.textarea {
-    display: block;
+.close-btn:hover,
+.close-btn:focus {
+    background-color: var(--ocean);
+    border: none;
+}
+.close-btn .icon {
+    fill: var(--navy-blue);
+    transition: fill var(--animation);
+}
+.close-btn:hover .icon,
+.close-btn:focus .icon {
+    fill: var(--white);
+}
+.title {
+    font-size: 16px;
+    letter-spacing: var(--l-l-space);
+    line-height: 1.5;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 16px;
+    color: var(--navy-blue);
+}
+
+.modal-form .field {
+    margin-bottom: 8px;
+}
+
+.modal-form .label {
+    position: block;
+    color: var(--light-slate);
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
+}
+.modal-form .field-container {
+    position: relative;
+}
+.modal-form .textarea {
     width: 100%;
     resize: unset;
-    outline: none;
+    height: 120px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: var(--navy-blue-modal);
+    outline: transparent;
+    border: 1px solid var(--navy-blue-modal);
+    background-color: transparent;
+    border-radius: 4px;
     padding: 8px 16px;
+    transition: border-color var(--animation);
 }
-.modal .icon {
+.modal-form .field-container .icon {
     fill: var(--navy-blue);
     position: absolute;
-}
-.modal .inp.icon {
-    height: 40px;
-    bottom: 30px;
-    left: 10px;
-}
-.modal .close {
-    border-radius: 50%;
-    box-sizing: content-box;
-    padding: 8px;
-    border: 1px solid rgb(0, 0, 0, 0.1);
-    background-color: var(--cornflower);
-    transition: background-color var(--animation);
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
     transition: fill var(--animation);
-    right: 24px;
-    margin-bottom: 24px;
 }
-.modal .input {
+
+.modal-form .input {
     display: block;
     width: 100%;
     height: 40px;
     border-radius: 4px;
-    margin-bottom: 8px;
     border: 1px solid var(--light-slate);
     padding-left: 38px;
     outline: none;
+    background-color: transparent;
+    transition: border-color var(--animation);
 }
-.modal .label:focus-within .input {
+.modal-form .label .input:focus-within,
+.modal-form .label .textarea:focus-within {
     border-color: var(--iris);
 }
+.policy-check-container {
+    margin-bottom: 24px;
+}
+.modal-form .checkbox {
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--navy-blue-modal);
+    border-radius: 2px;
+    transition: background-color var(--animation), border var(--animation),
+        fill var(--animation);
 
-.modal .label:focus-within .input {
-    border-color: var(--iris);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
 }
-.modal .label:focus-within .textarea {
-    border-color: var(--iris);
+.policy-check-container .icon {
+    fill: var(--navy-blue);
 }
-.modal .accept-text {
+.modal-form .accept-text {
     font-size: 12px;
     text-align: center;
     align-items: center;
     padding: 16px 0 24px;
     gap: 8px;
 }
-.modal .accept-text .modal-link {
+.underline {
     text-decoration: underline;
 }
-.modal .label:focus-within .icon {
+.modal-form .label:focus-within .icon {
     fill: var(--iris);
 }
-.submit-btn {
-    display: block;
-    padding: 16px 32px;
-    background-color: var(--iris);
-    color: var(--white);
-    justify-content: center;
-    border: none;
-    letter-spacing: var(--btn-l-space);
-    border-radius: 4px;
-    cursor: pointer;
-    min-width: 169px;
-    line-height: 1.5;
-    margin: 0 auto;
-    box-shadow: 0 4px 4px rgb(0, 0, 0, 0.15);
-    transition: background-color var(--animation);
-}
 
-.submit-button:hover,
-.submit-button:focus {
+.submit-btn:hover,
+.submit-btn:focus {
     background-color: var(--ocean);
-}
-.modal .close:hover,
-.modal .close:focus {
-    background-color: var(--ocean);
-    fill: var(--white);
 }
