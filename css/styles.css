@@ -350,13 +350,16 @@ a:active {
     gap: 24px;
 }
 .subscribe-form .input {
-    border: 1px solid #fff;
+    border: 1px solid var(--white);
     border-radius: 4px;
+    color: var(--white);
     min-width: 264px;
     height: 40px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     background: transparent;
     padding: 8px 16px;
+    font-size: 12px;
+    letter-spacing: 0.04em;
     line-height: 2;
 }
 .subscribe-form .input::placeholder {
@@ -367,6 +370,7 @@ a:active {
     height: 40px;
     justify-content: center;
     align-items: center;
+    font-weight: 500;
 }
 .subscribe-form .icon {
     margin-left: 16px;
@@ -386,7 +390,7 @@ a:active {
     justify-content: center;
     opacity: 0;
     pointer-events: none;
-    transition: opacity var(--animation);
+    transition: opacity var(--animation), visibility var(--animation);
 }
 .modal {
     position: absolute;
@@ -421,8 +425,7 @@ a:active {
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0;
     cursor: pointer;
-    transition: background-color var(--animation);
-    transition: border var(--animation);
+    transition: background-color var(--animation), border var(--animation);
 }
 .close-btn:hover,
 .close-btn:focus {
@@ -452,7 +455,7 @@ a:active {
 }
 
 .modal-form .label {
-    position: block;
+    display: block;
     color: var(--light-slate);
     font-size: 12px;
     line-height: 1.17;
