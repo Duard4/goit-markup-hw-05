@@ -502,7 +502,7 @@ a:active {
     background-color: transparent;
     transition: border-color var(--animation);
 }
-.modal-form .label .input:focus-within,
+.modal-form .field-container .input:focus-within,
 .modal-form .label .textarea:focus-within {
     border-color: var(--iris);
 }
@@ -529,7 +529,7 @@ a:active {
 .underline {
     text-decoration: underline;
 }
-.modal-form .label:focus-within .icon {
+.modal-form .field-container:focus-within .icon {
     fill: var(--iris);
 }
 
