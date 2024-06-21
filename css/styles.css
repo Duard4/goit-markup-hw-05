@@ -527,7 +527,7 @@ a:active {
     fill: var(--navy-blue);
 }
 .modal-form .checkbox:checked + .label .custom-checkbox {
-    background-color: var(--iris);
+    background-color: var(--ocean);
     border: none;
     fill: var(--cloud);
 }
