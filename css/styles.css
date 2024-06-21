@@ -526,7 +526,7 @@ a:active {
 .policy-check-container .icon {
     fill: var(--navy-blue);
 }
-.modal-form .checkbox:checked {
+.modal-form .checkbox:checked .custom-checkbox {
     background-color: var(--iris);
     border: none;
     fill: var(--cloud);
